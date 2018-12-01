@@ -1,6 +1,18 @@
 @import './media';
 @import './variables';
 
+@keyframes spin {
+    0% {
+        transform: rotateY(360deg) rotate(30deg);
+    }
+    40% {
+        transform: rotateY(180deg) rotate(15deg);
+    }
+    100% {
+        transform: rotateZ(0deg) rotate(0deg);
+    }
+}
+
 .dashboard {
     td > img {
         cursor: pointer;
@@ -181,6 +193,7 @@
     justify-content: center;
     transform: unset;
     width: 0;
+    animation: spin 1s ease-out;
 
     @media(--mobile) {
         margin: auto;

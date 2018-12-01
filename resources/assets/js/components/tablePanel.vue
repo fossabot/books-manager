@@ -5,6 +5,9 @@
                 <datatable v-bind="$data">
                     <button class="btn btn-primary" data-toggle="modal" data-target="#edit-modal" :disabled="selection.length != 1" @click="edit">編集</button>
                     <button class="btn btn-danger" :disabled="selection.length == 0" @click="remove">削除</button>
+                    <select name="本棚" class="form-control" style="display: inline-block; width: 200px; height: 38px;">
+                        <option value="1">既存の本棚</option>
+                    </select>
                 </datatable>
             </div>
         </div>
